@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Admin
+|--------------------------------------------------------------------------
+*/
+// Admin Dashboard
 Route::middleware(['auth:sanctum', 'verified'])->get('/admin/dashboard', function () {
     return view('admin.index');
 })->name('admin.dashboard');
+
+// Admin Logout
+Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
