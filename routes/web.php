@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\CategoryController;
 
 
 /*
@@ -29,5 +30,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/admin/dashboard', functio
     return view('admin.index');
 })->name('admin.dashboard');
 
-// Admin Logout
-Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+Route::prefix('admin')->group(function () {
+    // Admin Logout
+    Route::get('/logout', [AdminController::class, 'logout'])->name('admin.logout');
+
+    // Resource All Route
+    Route::resource('/category', CategoryController::class);
+});
