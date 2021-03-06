@@ -33645,7 +33645,35 @@ div.tagsinput span.tag a {
 .jsgrid .jsgrid-table td {
     font-weight: 400;
 }
+
 .table thead th,
 .jsgrid .jsgrid-table thead th {
     color: #59a59d !important;
+}
+
+.form-control:focus,
+.asColorPicker-input:focus,
+.dataTables_wrapper select:focus,
+.jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type="text"],
+.jsgrid .jsgrid-table .jsgrid-filter-row select:focus,
+.jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type="number"],
+.select2-container--default .select2-selection--single:focus,
+.select2-container--default
+    .select2-selection--single
+    .select2-search__field:focus,
+.typeahead:focus,
+.tt-query:focus,
+.tt-hint:focus,
+select.form-control,
+select.asColorPicker-input,
+.dataTables_wrapper select,
+.jsgrid .jsgrid-table .jsgrid-filter-row select,
+.select2-container--default select.select2-selection--single,
+.select2-container--default
+    .select2-selection--single
+    select.select2-search__field,
+select.typeahead,
+select.tt-query,
+select.tt-hint {
+    color: #f7f7f7 !important;
 }

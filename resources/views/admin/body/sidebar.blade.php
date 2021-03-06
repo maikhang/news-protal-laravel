@@ -75,7 +75,7 @@
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{ route('category.index') }}">Category</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">SubCategory</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('subcategory.index') }}">SubCategory</a></li>
           </ul>
         </div>
       </li>

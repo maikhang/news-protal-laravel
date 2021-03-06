@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\SubCategoryController;
 
 
 /*
@@ -36,4 +37,5 @@ Route::prefix('admin')->group(function () {
 
     // Resource All Route
     Route::resource('/category', CategoryController::class);
+    Route::resource('/subcategory', SubCategoryController::class);
 });

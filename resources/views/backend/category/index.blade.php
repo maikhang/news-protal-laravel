@@ -20,11 +20,10 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @php $stt=0; @endphp
+                        @php($i = 1)
                         @foreach ($categories as $category)
-                        @php $stt++; @endphp
                         <tr>
-                            <td> {{ $stt }} </td>
+                            <th> {{ $i++ }} </th>
                             <th> {{ $category->category_en }} </th>
                             <th> {{ $category->category_vi }} </th>
                             <td>
